@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang ="en">
+ <head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width-device=width,initial-scale=1.0">
+ <title>Ecommerce Website</title>
+ </head> 
+ <body>
+    <style>
+      /*---- * ---- */  
+        *{
+       padding:0;
+       margin:0;
+       box-sizing: border-box;
+       }  
+   
+       body{
+       font-family:'Poppins', sans-serif;
+       margin:0;
+       }
+
+     /*---- html ----*/
+     html{
+      scroll-behavior:smooth;
+  }
+     /*---- navbar ----*/
+   .navbar{
+       display: flex;
+       align-items: center;
+       padding:20px;
+   }
+   /*---- nav ----*/
+   nav{
+       flex:1;
+       text-align: right;
+   }
+   nav ul{
+        display:inline-block;
+        list-style-type:none;
+   }
+   
+   nav ul li{
+       display:inline-block;
+        padding-left: 20px;
+   }
+   a{
+       text-decoration: none;
+       color:#555;
+   }
+   /*---- menu-icon----*/
+   .menu-icon{
+       display: none;
+      width:28px;
+      margin-left: 20px;
+   }
+   /*----container ---- */
+   #container{
+        width:100%;
+        height:auto;
+       /* margin:auto;  */
+       /* padding-left:25px;
+       padding-right:25px; */
+        margin:0; 
+       overflow:hidden;
+   }
+
+
+   /*----two ----*/
+   .two{
+       width:100vw;
+       overflow:hidden;
+       background-position:no-repeat;
+   }
+
+   .two > img {
+       width:100%;
+   }
+   /*---- offer ----*/
+   .offer{
+    background: radial-gradient(#fff,#ffd6d6);
+    margin-top:0;
+    padding:10px 10px;
+}
+   /*---- small-container----*/
+   .small-container{
+    max-width: 1080px;
+    margin:auto;
+    padding-left: 25px;
+    padding-right:25px;
+}
+   /*---- title ----*/
+   .title{
+    text-align: center;
+    margin:0 auto 80px;
+    position:relative;
+    line-height: 60px;
+    color:#555;
+}
+.title::after{
+    content: '';
+    background: #ff523b;
+    width:80px;
+    height:5px;
+     bottom:0;
+     left:50%;
+    border-radius:5px;
+    transform:translateX(-50%);
+    position:absolute;
+}
+/*---- row ----*/
+.row{
+    display:flex;
+    align-items:center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+
+/*-----input----*/
+input{
+     width:400px;
+    height: 40px; 
+    margin:2px 36%;
+} 
+
+textarea{
+    width:400px;
+    height:250px;
+    margin:1% 36%;
+}
+.button_1{
+  width:100px;
+   height: 40px;
+   color:white;
+   background-color: blue;
+   margin:0% 0% 2px  36%;
+}
+@media only screen and (max-width:320px){
+   input,textarea{
+     width:80%; 
+   padding: 10px;
+   margin:auto;
+    display: block; 
+   }
+   .button_1{
+    width:18%; 
+   padding: 10px;
+    margin:0% 11%;
+    display: block;
+ }
+}
+
+@media only screen and (max-width:600px){
+   input,textarea{
+     width:80%; 
+   padding: 10px;
+   margin:auto;
+    display: block; 
+   }
+   .button_1{
+    width:18%; 
+   padding: 10px;
+    margin:0% 10%;
+    display: block;
+ }
+}
+@media only screen and (max-width:800px){
+   input,textarea{
+     width:80%; 
+   padding: 10px;
+   margin:auto;
+    display: block; 
+   }
+   .button_1{
+    width:18%; 
+   padding: 10px;
+    margin:0% 10%;
+    display: block;
+ }
+}
+/*----- footer -----*/
+.footer{
+background: #000;
+color:#8a8a8a;
+font-size: 14px;
+padding:60px 0 20px;
+}
+
+.footer p{
+    color:#8a8a8a;
+    margin-left:20px;
+    margin-bottom:17px;
+}
+.footer h3{
+    color:#fff;
+    margin-bottom:20px;
+    margin-left:20px;
+    margin-top: 20px;
+}
+
+.footer-col-1, .footer-col-2,.footer-col-3,.footer-col-4{
+  min-width:280px;
+  margin-bottom:10px; 
+}
+
+.footer-col-1{
+    flex-basis:30%;
+}
+
+.footer-col-2{
+    flex:1;
+    text-align: center;
+}
+.footer-col-1 img{
+    margin-bottom:0;
+     margin-left: 20px;
+}
+
+.footer-col-2 img{
+   width:180px;
+   margin-bottom: 20px;
+}
+
+.footer-col-3,.footer-col-4{
+    flex-basis:12%;
+    text-align: center;
+}
+ul{
+    list-style-type:none;
+}
+
+.app-logo{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.app-logo img{
+    width:140px;
+}
+
+.footer hr{
+    border:none;
+    background: #b5b5b5;
+    height:1px;
+    margin:10px 30px;
+}
+.Copyright{
+    text-align: center;
+}
+.menu-icon{
+   width:28px;
+   margin-left:20px;
+}
+
+
+/*---- media query for less than 350 screen size----*/
+@media  only screen and (max-width:350px){
+    .row{
+        text-align:center;
+    }
+    .navbar ul li{
+        text-align:left;
+    }
+    .two{ 
+     margin:auto;  
+   }
+    .footer-col-3,.footer-col-4{
+       margin:0 15%;
+  }
+  .footer-col-1,.footer-col-2{
+       margin:0 15%;
+  }
+    .col-2, .col-3, .col-4{
+        width:100%;
+    }
+}
+/*---- media query for menu----*/
+@media  only screen and (max-width:350px){
+   nav ul{
+       position:absolute;
+       top:110px;
+       left:0;
+       background: #333;
+       width:100%;  
+       overflow: hidden;
+       transition:max-height 0.5s
+   } 
+   .navbar ul li {
+    text-align:left;
+   }
+   nav ul li {
+       display:block;
+       margin-right:50px;
+       margin-top:8px;
+       margin-bottom:8px;
+   }
+  nav ul li a{
+      color:#fff;
+  }
+  .footer-col-3,.footer-col-4{
+      margin-right:100px;  
+  }
+  .footer-col-1,.footer-col-2{
+    text-align: center;
+  }
+
+  .two{
+      margin:auto;
+  }
+  .menu-icon{
+      display:block;
+      cursor:pointer;
+  }
+}
+
+/*---- media query for less than 600 screen size----*/
+@media  only screen and (max-width:600px){
+    .row{
+        text-align:center;
+    }
+    .navbar ul li{
+        text-align:left;
+    }
+    .two{ 
+     margin:auto;  
+   }
+    .footer-col-3,.footer-col-4{
+       margin:0 15%;
+  }
+  .footer-col-1,.footer-col-2{
+       margin:0 15%;
+  }
+    .col-2, .col-3, .col-4{
+        width:100%;
+    }
+}
+/*---- media query for menu----*/
+@media  only screen and (max-width:800px){
+   nav ul{
+       position:absolute;
+       top:110px;
+       left:0;
+       background: #333;
+       width:100%;  
+       overflow: hidden;
+       transition:max-height 0.5s
+   } 
+   .navbar ul li {
+    text-align:left;
+   }
+   nav ul li {
+       display:block;
+       margin-right:50px;
+       margin-top:8px;
+       margin-bottom:8px;
+   }
+  nav ul li a{
+      color:#fff;
+  }
+  .footer-col-3,.footer-col-4{
+      margin-right:100px;  
+  }
+  .footer-col-1,.footer-col-2{
+    text-align: center;
+  }
+
+  .two{
+      margin:auto;
+  }
+  .menu-icon{
+      display:block;
+      cursor:pointer;
+  }
+}
+
+ </style>
+
+<!---- container---->
+    <div id ="container">
+    <div class = "navbar">
+    <div class ="logo">
+    <img src="images/do.jpg" width="125px">  
+    </div>
+    <nav>
+        <ul id="MenuItems">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Product.html">Product</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Contact.html">Contact</a></li>      
+        </ul> 
+     </nav> 
+     <!-- <img src="images/headerforeground01.png" width="30px" height="30px"> -->
+     <img src="images/menu.png" class="menu-icon"
+     onclick="menutoggle()"> 
+    </div>
+    <div class ="two">  
+     <img src="images/az.jpg">
+    </div>
+     <!---- offer ---->
+     <div class ="offer">
+    <div class="small-container">
+    <h2 class="title">Contact Us</h2>
+    <div class="row">
+        </div>
+         
+            <form>
+            <input type ="text" placeholder="Name"><br>
+            <input type ="text" placeholder="E-mail"><br>
+            <input type ="text" placeholder="Phone"><br>
+             <textarea placeholder="Message"></textarea>
+             <button class ="button_1" type="Submit">Send</button>
+            </form>
+      </div> 
+    </div>
+    </div>
+
+       <!----- footer ----->
+       <div class="footer">
+        <div class ="container">
+            <div class="row">
+             <div class ="footer-col-1">
+                <div class="app-logo">
+                    <img src="images/do.jpg">                
+                 <h3>Download</h3>
+                 <p>Terms and Condition <br>
+                     Privacy Policy <br>
+                     Contact Us <br>
+                     E-Commerce <br>
+                     FAQ <br>
+                 </p>     
+                </div>
+             </div>
+                <div class ="footer-col-2">
+                     <img src="images/do.jpg">
+                    <p>Our Purpose is To Sustainably Make the Pleasure and 
+                        Benefits For  our Customers Accessible.</p>       
+                </div>
+                <div class ="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Blog Post</li>
+                        <li>Coupons</li>
+                        <li>Return Policy</li>
+                        <li>Join</li>
+                    </ul>
+                    </div>
+                    <div class ="footer-col-4">
+                        <h3>Follow us</h3>
+                        <ul>
+                            <li>Twitter</li>
+                            <li>Facebook</li>
+                            <li>Instagram</li>
+                            <li>YouTube</li>
+                          </ul> 
+                          </div>
+                         </div>
+                         <hr>
+                         <p class="Copyright">Copyright 2022- Stephen Tutorials</p>
+                        </div>
+                        <div class="v" style="bottom:10px; margin-left:87%; z-index: 1111;  position:relative;">
+                            <a href="#container"> <img src="images/gototop1.png"></a>           
+                         </div> 
+                      </div>
+                    </div>
+                
+
+                
+ 
+    <!----- js for toggle menu---->
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+
+    MenuItems.style.maxHeight ="0px";
+
+    function menutoggle(){
+        if(MenuItems.style.maxHeight =="0px")
+        {
+            MenuItems.style.maxHeight ="200px";
+        }
+        else
+        {
+            MenuItems.style.maxHeight="0px"
+        }
+    }
+</script>
+ </body>
+<html>
+
